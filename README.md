@@ -22,10 +22,31 @@ enforced in code, not hoped for in a prompt.
 - **Cloud / infra:** AWS, EKS, Terraform, GitHub Actions, OpenTelemetry
 - **Frontend:** Vue 3, TypeScript
 
+## Projects
+
+Public repos, each small, tested, and CI-green, showing how I build rather than
+just what I know:
+
+- **[grounded](https://github.com/ruelbelmonte/grounded)** — a guardrailed RAG
+  assistant for high-stakes domains: refusal-when-ungrounded, prompt-injection
+  resistance, and PII egress filtering enforced as tested code. Python.
+- **[resilient-ai](https://github.com/ruelbelmonte/resilient-ai)** — a
+  production-grade .NET service for LLM-backed endpoints: Polly resilience,
+  OpenTelemetry tracing with token/cost metrics, and Result-pattern error flow.
+- **[mcp-notes](https://github.com/ruelbelmonte/mcp-notes)** — an MCP server
+  exposing read-only, sandboxed tools over a notes vault, with a tested
+  path-traversal boundary. TypeScript.
+- **[vue-ai-chat](https://github.com/ruelbelmonte/vue-ai-chat)** — a Vue 3
+  streaming chat UI done right: token streaming, cancellation, and error
+  recovery as a tested state machine.
+- **[promptproof](https://github.com/ruelbelmonte/promptproof)** — a red-team
+  harness that tests whether an LLM system resists prompt injection, using
+  deterministic canary-based leak detection. Python.
+
 ## Selected work
 
-Most of my work lives in private repos, so the substance is described here
-rather than linked. Happy to go deeper in conversation.
+The rest lives in private repos, so the substance is described here rather than
+linked. Happy to go deeper in conversation.
 
 **Shirley, a guardrailed internal AI assistant.** A Slack-native assistant over
 internal documentation. Prompt-injection resistance, PII egress filtering, and
