@@ -42,6 +42,9 @@ just what I know:
 - **[promptproof](https://github.com/ruelbelmonte/promptproof)** — a red-team
   harness that tests whether an LLM system resists prompt injection, using
   deterministic canary-based leak detection. Python.
+- **[keystone](https://github.com/ruelbelmonte/keystone)** — an enterprise-grade
+  Clean Architecture / DDD `dotnet new` template: CQRS, EF Core, domain events,
+  and architecture tests that enforce the layering. C# / .NET.
 
 ## Selected work
 
