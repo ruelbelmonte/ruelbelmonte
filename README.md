@@ -22,6 +22,39 @@ in tested code, not in a prompt.
 - **Cloud / infra:** AWS, EKS, Terraform, GitHub Actions, OpenTelemetry
 - **Frontend:** Vue 3, TypeScript
 
+## Featured: delivery security
+
+Two public repos on how code gets from a pull request to production without
+trusting more than it has to.
+
+<a href="https://github.com/ruelbelmonte/secure-delivery-pipeline">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ruelbelmonte/secure-delivery-pipeline/main/docs/images/secure-delivery-pipeline-dark.png">
+    <img alt="secure-delivery-pipeline: build once, sign keylessly, verify before every deploy, promote the same digest to prod." src="https://raw.githubusercontent.com/ruelbelmonte/secure-delivery-pipeline/main/docs/images/secure-delivery-pipeline-light.png" width="100%">
+  </picture>
+</a>
+
+**[secure-delivery-pipeline](https://github.com/ruelbelmonte/secure-delivery-pipeline)**:
+a supply-chain-hardened CI/CD pipeline on GitHub Actions for a .NET 10 API. Images
+are signed keylessly with cosign, carry an SBOM attestation, are verified before
+every deploy, and are promoted to prod by digest without a rebuild. It runs end to
+end on a free GitHub account, deploying to a throwaway kind cluster, with an
+optional OIDC-authenticated Terraform stack for AWS.
+
+<a href="https://github.com/ruelbelmonte/workflow-policy">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ruelbelmonte/workflow-policy/master/docs/assets/workflow-policy-hero-dark.png">
+    <img alt="workflow-policy: workflow files pass through seven rule probes; violations are pinpointed to file and line and reported as PR annotations and SARIF." src="https://raw.githubusercontent.com/ruelbelmonte/workflow-policy/master/docs/assets/workflow-policy-hero-light.png" width="100%">
+  </picture>
+</a>
+
+**[workflow-policy](https://github.com/ruelbelmonte/workflow-policy)**: a GitHub
+Action that lints workflows for least-privilege permissions and supply-chain
+hygiene. Seven rules cover unpinned actions, unscoped write permissions,
+`pull_request_target` misuse and script injection, and each violation fails CI
+with a `file:line` annotation and SARIF for code scanning. It is static and makes
+no network calls. Python.
+
 ## Projects
 
 Public repos, each small, tested, and CI-green, showing how I build rather than
